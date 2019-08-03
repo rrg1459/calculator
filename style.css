@@ -1,0 +1,117 @@
+.calculator {
+	font-size: 20px;
+	width: 210px;
+	height: 331px;
+	border: 5px double #0000cc;
+	border-radius: 1.8%;
+	background-color: #bfbfbf;
+	justify-content: stretch;
+	grid-template-rows: repeat(1, 51px);
+	display: grid;
+	grid-template-areas: 
+			'display'
+			'keys'
+}
+.display-main {
+		grid-area: display;
+		background: #b2b2e4;
+		text-align: right;    
+		margin: 5px 5px 1px 5px;
+		border: 1px solid black;
+}
+
+.line_secondary {
+	font-size: 15px;
+	overflow: hidden;
+	font-style: italic;
+	color: #595959;
+	padding: 2px 4px;
+}
+
+.line_primary {
+	font-size: 20px;
+	color: #000;
+	padding: 0 2px 4px 3px;
+}
+
+.btn:hover {background-color: #3a3949;}
+
+.btn {
+	width: 95%;
+	height: 100%;
+	background-color: #30997a;
+	border-radius: 10%;
+	border: none;
+	color: white;
+	font-size: 1.2em;
+	box-shadow: 1.9px 1.9px 0 0 #696969;
+	transition: 50ms;
+}
+
+.btn:active,
+.btn:focus {
+	outline: none;
+}
+
+.btn:active {
+	transform: translate(1.5px, 1.5px);
+	box-shadow: none;
+}
+
+.btn-op {background-color: #4464a1;}
+
+.btn-clr {
+	background-color: #b03532;
+	font-size: 0.8em;
+}
+
+.btn-equals {background-color: #248f24;}
+
+.btn-num {background-color: #6600ff;}
+
+.btn-big {font-size: 1.7em;}
+
+.keys {
+	grid-area: keys;
+	display: grid;
+	grid-gap: 5px;
+	padding: 4px;
+	border-radius: 1.8%;
+	justify-content: stretch;
+	grid-template-columns: repeat(3, 50px);
+	grid-template-rows: repeat(5, 50px);
+	grid-template-areas:
+		"clr      mult    divide     minus"
+		"i7       i8      i9         add"
+		"i4       i5      i6         add"
+		"i1       i2      i3         equals"
+		"arrow    i0      decimal    equals";
+}
+
+#clr {grid-area: clr;}
+#mult {grid-area: mult;}
+#divide {grid-area: divide;}
+#minus {grid-area: minus;}
+#add {grid-area: add;}
+#equals {grid-area: equals;}
+#arrow {grid-area: arrow;}
+#decimal {grid-area: decimal;}
+#i0 {grid-area: i0;}
+#i1 {grid-area: i1;}
+#i2 {grid-area: i2;}
+#i3 {grid-area: i3;}
+#i4 {grid-area: i4;}
+#i5 {grid-area: i5;}
+#i6 {grid-area: i6;}
+#i7 {grid-area: i7;}
+#i8 {grid-area: i8;}
+#i9 {grid-area: i9;}
+
+body {
+	height: 85vh;
+	min-height: 331px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
